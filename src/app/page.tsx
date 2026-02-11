@@ -5,7 +5,7 @@ import {
   Plus, RefreshCw, Settings, Trash2, ExternalLink, Download, Upload,
   DollarSign, Eye, Clock, AlertCircle, CheckCircle2, Edit3,
 } from "lucide-react";
-import { detectPlatform, generateId, calculatePayout, getDaysUntil14, is14DaysPassed } from "@/lib/storage";
+import { calculatePayout, getDaysUntil14, is14DaysPassed } from "@/lib/storage";
 import { apiGetVideos, apiAddVideo, apiUpdateVideo, apiDeleteVideo, apiGetSettings, apiSaveSettings } from "@/lib/api";
 import { VideoEntry, Settings as SettingsType } from "@/lib/types";
 import { formatNumber, formatCurrency, platformColor, platformLabel } from "@/lib/utils";
