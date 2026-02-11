@@ -12,9 +12,9 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
 
 WORKDIR /app
 
-# Install deps first (cached layer)
+# Install deps (skip Puppeteer's bundled Chromium download)
 COPY package.json package-lock.json ./
-RUN npm ci --ignore-scripts && npx puppeteer browsers clear
+RUN PUPPETEER_SKIP_DOWNLOAD=true npm ci
 
 COPY . .
 RUN npm run build
