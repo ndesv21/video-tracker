@@ -19,7 +19,5 @@ RUN PUPPETEER_SKIP_DOWNLOAD=true npm ci
 COPY . .
 RUN npm run build
 
-RUN mkdir -p /app/data
-
 EXPOSE 3000
 CMD ["npm", "start"]
